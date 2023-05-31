@@ -1,4 +1,4 @@
-from element1 import Element
+from elements import Element
 from time import sleep
 from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
