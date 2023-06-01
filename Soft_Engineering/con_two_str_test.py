@@ -6,21 +6,21 @@ from selenium.webdriver.support import expected_conditions as EC
 import pytest
 
 from basic_calculator import Calculator
-first = 2
-second = 3
+first = 'gs'
+second = 'bu'
 url = 'https://testsheepnz.github.io/BasicCalculator.html'
 def test_dif():
     browser = webdriver.Chrome()
 
-    diff = Calculator(browser, url)
-    diff.scroll()
-    diff.select_prototype()
-    diff.first_nun(first)
-    diff.second_nun(second)
-    diff.select_subtract()
-    diff.calculate_click()
-    result = diff.result()
+    conc = Calculator(browser, url)
+    conc.scroll()
+    conc.select_prototype()
+    conc.first_nun(first)
+    conc.second_nun(second)
+    conc.select_concatenate()
+    conc.calculate_click()
+    result = conc.result()
 
-    assert result == '-1'
+    assert result == 'gsbu'
+
     browser.quit()
-
